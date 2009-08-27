@@ -1,0 +1,40 @@
+Source: dvd+rw-tools
+Section: utils
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends:
+ debhelper (>= 7), libcam-dev [kfreebsd-i386 kfreebsd-amd64], m4, sharutils,
+ quilt
+Standards-Version: 3.8.3
+Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
+
+Package: dvd+rw-tools
+Section: utils
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, genisoimage
+Suggests: cdrskin
+Description: DVD+-RW/R tools
+ dvd+rw-tools makes it possible to burn DVD images created by dvdauthor or
+ genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks, replacing
+ cdrecord-proDVD in many cases.
+ .
+ The package contains:
+ .
+   * growisofs to burn DVD images or create a data DVD on the fly
+   * dvd+rw-format to format a DVD+RW
+   * dvd+rw-mediainfo to give details about DVD disks
+ .
+ and some programs to control the write speed and obtain information from
+ DVD-RAM.
+
+Package: dvd+rw-tools-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends}, dvd+rw-tools (= ${binary:Version})
+Description: DVD+-RW/R tools (debug)
+ dvd+rw-tools makes it possible to burn DVD images created by dvdauthor or
+ genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks, replacing
+ cdrecord-proDVD in many cases.
+ .
+ This package contains the debugging symbols.

@@ -1,0 +1,34 @@
+.TH BTCFLASH 8 "2006-01-17" "6.0" "firmware flash utility"
+
+.SH NAME
+BTCFLASH \- firmware flash utility for BTC DRW1008 DVD+/-RW recorder.
+
+.SH SYNOPSIS
+.B btcflash
+.RB DEVICE
+.RB FILE
+
+.SH DESCRIPTION
+.B BTCFLASH
+may also work with other BTC DVD recorders, such as the DRW1004 and DRW1108, but
+they have not been tested. USE AT YOUR OWN RISK!
+
+Firmware files may be obtained by running BTC's Windows flash utility, then
+searching in the WINDOWS\TEMP or WINNT\TEMP directory for a *.HEX file. It will
+probably be in a subdirectory named PAC*.tmp.DIR, and the HEX file will be named
+Vnnnn.HEX, where nnnn is the firmware version number. You'll also find
+IDEFLASH.EXE or BTCFLASH.EXE in the same directory.
+
+.SH OPTIONS
+.TP
+.B DEVICE
+Write the firmware to the given device.
+.TP
+.B FILE
+Read the firmware from the given file. This utility will also accept firmware files in ".BIN" format.
+
+.SH AUTHOR
+BTCFLASH was written by David Huang <khym@azeotrope.org>.
+.PP
+This manual page was written by Daniel Baumann <daniel@debian.org>, for the
+Debian project (but may be used by others).

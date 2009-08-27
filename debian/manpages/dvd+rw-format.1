@@ -1,0 +1,43 @@
+.TH dvd+rw-format 1 "September 2004"
+.SH NAME
+dvd+rw-format \- format DVD+-RW/-RAM disk
+
+.SH SYNOPSIS
+.B dvd+rw\-format
+[\fB\-force[=full]\fP]
+[\fB\-lead\-out | \-blank[=full]\fP]
+[\fB\-ssa[=none | default | max]\fP]
+.I /dev/dvd
+
+.SH DESCRIPTION
+The
+.B dvd+rw\-format
+command formats dvd disk in the specified dvd
+drive (e.g. \fI/dev/dvd\fR).
+
+.SH OPTIONS
+.TP
+.BI \-force[=full]
+This forces to format dvd as new while wiping any existing data.
+.TP
+.BI \-blank[=full]
+This blanks dvd while changing to sequential mode.
+.TP
+.BI \-lead\-out
+This relocates the lead\-out next to outermost written sector as well
+as makes sure there is no virgin surface before it. Previously written
+data is not affected by this operation. Useful for addressing
+.B DVD\-ROM compatibility,
+or playability of already recorded media in legacy units.
+
+.SH SEE ALSO
+Most up-to-date information on dvd+rw\-tools is available at
+http://fy.chalmers.se/~appro/linux/DVD+RW/.
+.PP
+The manpage for \fBgenisofs\fP(8), \fBgrowisofs\fP(1),
+\fBdvd+rw\-mediainfo\fP(1), \fBdvd+rw\-booktype\fP(1).
+
+.SH AUTHOR
+\fBdvd+rw\-format\fR was written by Andy Polyakov <appro@fy.chalmers.se>.
+This manual page was written by Osamu Aoki <osamu@debian.org>
+for the Debian project.

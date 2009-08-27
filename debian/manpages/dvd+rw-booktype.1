@@ -1,0 +1,35 @@
+.TH dvd+rw-booktype 1 "September 2004, version 4.10"
+.SH NAME
+dvd+rw-booktype \- format DVD+-RW/-RAM disk with a logical format
+
+.SH SYNOPSIS
+.B dvd+rw\-booktype
+[\fB\-dvd\-rom\-spec | \-dvd+rw\-spec | \-dvd+r\-spec | \-inq\fP]
+[\fB\ \-media | \-unit| \-unit+rw | \-unit+r\fP]
+.I /dev/dvd
+
+.SH DESCRIPTION
+The
+.B dvd+rw\-booktype
+command formats dvd disk in the specified dvd
+drive (e.g. \fI/dev/dvd\fR) with a specified logical format.
+.B You can't expect this utility to work with all recorders.
+
+.SH OPTIONS
+.TP
+.BI \-dvd-rom
+This is useful for addressing
+.B DVD\-ROM compatibility,
+or playability in legacy units.
+
+.SH SEE ALSO
+Most up-to-date information on dvd+rw\-tools is available at
+http://fy.chalmers.se/~appro/linux/DVD+RW/.
+.PP
+The manpage for \fBgenisoimage\fP(8),  \fBgrowisofs\fP(1),
+\fBdvd+rw\-mediainfo\fP(1), \fBdvd+rw\-format\fP(1).
+
+.SH AUTHOR
+\fBdvd+rw\-booktype\fR was written by Andy Polyakov <appro@fy.chalmers.se>.
+This manual page was written by Osamu Aoki <osamu@debian.org>
+for the Debian project.

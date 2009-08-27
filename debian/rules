@@ -1,0 +1,57 @@
+#!/usr/bin/make -f
+
+include /usr/share/quilt/quilt.make
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+
+	[ ! -f Makefile ] || $(MAKE) clean
+	rm -f ChangeLog
+
+	dh_clean
+
+build: build-stamp
+build-stamp: patch
+	dh_testdir
+
+	CFLAGS="$(CFLAGS)" $(MAKE) WARN=-DI_KNOW_ALL_ABOUT_SUDO
+	CFLAGS="$(CFLAGS)" $(MAKE) +btcflash
+	CFLAGS="$(CFLAGS)" $(MAKE) rpl8
+	sed -n "/^%changelog$$/,$$ p" dvd+rw-tools.spec > ChangeLog
+
+	touch build-stamp
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	$(MAKE) install prefix=$(CURDIR)/debian/dvd+rw-tools/usr
+
+	mkdir -p debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools
+	cp index.html debian/docs/dvd-rw.html debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools
+	uudecode debian/docs/isofs4gb.gif.uee -o debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools/isofs4gb.gif
+
+binary: binary-arch
+
+binary-arch: install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs ChangeLog
+	dh_installdocs
+	dh_installman
+	dh_strip --dbg-package=dvd+rw-tools-dbg
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-indep:
+
+.PHONY: clean build install binary binary-arch binary-indep
