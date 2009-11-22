@@ -1,3 +1,9 @@
+dvd+rw-tools (7.1-6) unstable; urgency=low
+
+  * New maintainer (Closes: #543837)
+
+ -- TANIGUCHI Takaki <takaki@debian.org>  Sun, 22 Nov 2009 16:32:44 +0900
+
 dvd+rw-tools (7.1-5) unstable; urgency=low
 
   * Updating, sorting and wrapping depends.

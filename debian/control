@@ -1,7 +1,10 @@
 Source: dvd+rw-tools
 Section: utils
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Optical Media Tools Team <pkg-opt-media-team@lists.alioth.debian.org>
+Uploaders: TANIGUCHI Takaki <takaki@debian.org>,
+        Rogério Brito <rbrito@ime.usp.br>
+DM-Upload-Allowed: yes
 Build-Depends:
  debhelper (>= 7), libcam-dev [kfreebsd-i386 kfreebsd-amd64], m4, sharutils,
  quilt
