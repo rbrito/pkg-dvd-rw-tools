@@ -2,8 +2,9 @@ dvd+rw-tools (7.1-6) unstable; urgency=low
 
   * New maintainer (Closes: #543837)
   * debian/README.soruce: create 
+  * debian/control: add Vcs-*.
 
- -- TANIGUCHI Takaki <takaki@debian.org>  Sun, 22 Nov 2009 16:51:39 +0900
+ -- TANIGUCHI Takaki <takaki@debian.org>  Mon, 23 Nov 2009 10:28:47 +0900
 
 dvd+rw-tools (7.1-5) unstable; urgency=low
 

@@ -9,6 +9,8 @@ Build-Depends:
  debhelper (>= 7), libcam-dev [kfreebsd-i386 kfreebsd-amd64], m4, sharutils,
  quilt
 Standards-Version: 3.8.3
+Vcs-Browser: http://git.debian.org/?p=pkg-opt-media/dvd%2Brw-tools.git
+Vcs-Svn: git://git.debian.org/pkg-opt-media/dvd+rw-tools.git
 Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 
 Package: dvd+rw-tools
