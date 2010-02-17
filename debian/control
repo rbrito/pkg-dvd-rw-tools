@@ -16,7 +16,8 @@ Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 Package: dvd+rw-tools
 Section: utils
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, genisoimage
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: genisoimage
 Suggests: cdrskin
 Description: DVD+-RW/R tools
  dvd+rw-tools makes it possible to burn DVD images created by dvdauthor or
