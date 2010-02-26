@@ -1,5 +1,5 @@
 Source: dvd+rw-tools
-Section: utils
+Section: video
 Priority: optional
 Maintainer: Optical Media Tools Team <pkg-opt-media-team@lists.alioth.debian.org>
 Uploaders: TANIGUCHI Takaki <takaki@debian.org>,
@@ -14,7 +14,7 @@ Vcs-Git: git://git.debian.org/pkg-opt-media/dvd+rw-tools.git
 Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 
 Package: dvd+rw-tools
-Section: utils
+Section: video
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, genisoimage
 Suggests: cdrskin
