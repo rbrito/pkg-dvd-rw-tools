@@ -1,9 +1,8 @@
 Author: Daniel Baumann <daniel@debian.org>
 Description: Fix manpage section
 
-diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
---- dvd+rw-tools.orig/growisofs.1   2008-03-01 10:40:06.000000000 +0000
-+++ dvd+rw-tools/growisofs.1        2008-04-01 09:02:23.000000000 +0000
+--- a/growisofs.1
++++ b/growisofs.1
 @@ -1,4 +1,4 @@
 -.TH GROWISOFS 1m "1 Mar 2008" "growisofs 7.1"
 +.TH GROWISOFS 1 "1 Mar 2008" "growisofs 7.1"

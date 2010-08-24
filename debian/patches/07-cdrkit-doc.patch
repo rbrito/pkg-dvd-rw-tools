@@ -1,9 +1,8 @@
 Author: Daniel Baumann <daniel@debian.org>
 Description: Update any cdrtools related information in the documentation to cdrkit.
 
-diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
---- dvd+rw-tools.orig/growisofs.1	2008-04-01 09:04:48.000000000 +0000
-+++ dvd+rw-tools/growisofs.1	2008-04-01 09:16:16.000000000 +0000
+--- a/growisofs.1
++++ b/growisofs.1
 @@ -1,6 +1,6 @@
  .TH GROWISOFS 1 "1 Mar 2008" "growisofs 7.1"
  .SH NAME
@@ -12,7 +11,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  .SH SYNOPSIS
  .B growisofs
  [\fB\-dry\-run\fP]
-@@ -9,10 +9,10 @@ growisofs \- combined mkisofs frontend/D
+@@ -9,10 +9,10 @@
  [\fB\-speed=1\fP]
  \-[\fBZ|M\fP]
  .I /dev/dvd
@@ -25,7 +24,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  to facilitate appending of data to ISO9660 volumes residing on
  random-access media such as DVD+RW, DVD\-RAM, plain files, hard disk
  partitions. In the course of development general purpose DVD recording
-@@ -35,7 +35,7 @@ EXAMPLES section for further details.
+@@ -35,7 +35,7 @@
  Merge a new session to an existing one.
  .TP
  .BI \-version
@@ -34,7 +33,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  option.
  .TP
  .BI \-dvd\-compat
-@@ -47,7 +47,7 @@ explicitly burn [otherwise optional] lea
+@@ -47,7 +47,7 @@
  .BI \-dry\-run
  At dry\-run \fBgrowisofs\fP performs all the steps till, but not
  including the first write operation. Most notably check for "overburn"
@@ -43,7 +42,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  terminated prematurely.
  .TP
  .BI \-overburn
-@@ -68,8 +68,8 @@ be found in \fBdvd+rw\-mediainfo\fP outp
+@@ -68,8 +68,8 @@
  recordings are commonly performed at ~1/2 of advertised speed, because
  of defect management being in effect.
  .TP
@@ -54,7 +53,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  
  .P
  There are several undocumented options commonly denoted with
-@@ -82,7 +82,7 @@ these options undocumented is that those
+@@ -82,7 +82,7 @@
  need to use them directly can as well consult the source code or obtain
  specific instructions elsewhere.
  
@@ -63,16 +62,16 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  .P
  When using growisofs you may not use the
  .B \-o 
-@@ -99,7 +99,7 @@ will construct one for you;
+@@ -99,7 +99,7 @@
  Otherwise everything that applies to 
  .I [multisession] 
  mastering with 
 -.B mkisofs 
-+.B genisoimage 
++.B genisoimage
  applies to 
  .B growisofs 
  as well. 
-@@ -107,7 +107,8 @@ as well. 
+@@ -107,7 +107,8 @@
  needs at least 
  .B mkisofs
  version 1.14, version 2.0 is required for multisession write-once
@@ -82,7 +81,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  
  .SH EXAMPLES
  Actual device names vary from one operating system to another. We use
-@@ -146,12 +147,12 @@ command name is not intuitive in this co
+@@ -146,12 +147,12 @@
  .SH NOTES
  If executed under sudo(8) growisofs refuses to start. This is done for
  the following reason. Naturally growisofs has to access the data set to
@@ -98,7 +97,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  executable image. This means that being executed under sudo(8),
  growisofs effectively grants sudoers right to execute program of their
  choice with elevated privileges. If you for any reason still find the
-@@ -162,13 +163,13 @@ real growisofs binary.
+@@ -162,13 +163,13 @@
  .nf
  	#!/bin/ksh
  	unset SUDO_COMMAND
@@ -114,7 +113,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  preclude unauthorized access to the data.
  
  If the media already carries isofs and \fBgrowisofs\fP is invoked with
-@@ -214,7 +215,7 @@ it gets pre-formatted with minimal spare
+@@ -214,7 +215,7 @@
  Most up-to-date information on dvd+rw\-tools is available at
  http://fy.chalmers.se/~appro/linux/DVD+RW/.
  .PP
@@ -123,10 +122,9 @@ diff -Naurp dvd+rw-tools.orig/growisofs.1 dvd+rw-tools/growisofs.1
  
  .SH AUTHORS
  Andy Polyakov <appro@fy.chalmers.se> stands for programming and on-line
-diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
---- dvd+rw-tools.orig/index.html	2008-03-04 09:03:21.000000000 +0000
-+++ dvd+rw-tools/index.html	2008-04-01 09:20:57.000000000 +0000
-@@ -137,7 +137,9 @@ SRC="japanese.gif" WIDTH=48 HEIGHT=19 BO
+--- a/index.html
++++ b/index.html
+@@ -137,7 +137,9 @@
  	front-end to mkisofs,</B> i.e. invokes mkisofs to perform the
  	actual ISO9660 file system layout. Secondly, the DVD burners
  	available on the market can burn even CD-R[W] media and
@@ -137,7 +135,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  </TABLE>
  
  <!--
-@@ -480,13 +482,13 @@ are not capable of burning DVD+R is need
+@@ -480,13 +482,13 @@
  <A NAME="growisofs"><P></A><LI><P ALIGN="JUSTIFY"><B>Burning with <A
  HREF="tools/growisofs.c">growisofs</A>.</B> There is hardly a need for
  manual for growisofs. In a nutshell growisofs just passes all command
@@ -154,7 +152,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  are:
  
  <P><UL>
-@@ -494,12 +496,12 @@ are:
+@@ -494,12 +496,12 @@
  <LI>you don't have to specify -C option, growisofs will construct one
  for you;
  <LI>there is internal -Z option for initial session recording, this
@@ -170,7 +168,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  you used to master the initial &quot;session&quot; with and stick to
  them, e.g.:
  
-@@ -508,9 +510,10 @@ growisofs -Z /dev/scd0 <FONT COLOR="red"
+@@ -508,9 +510,10 @@
  growisofs -M /dev/scd0 <FONT COLOR="red">-R -J</FONT> /more/files
  </PRE></BLOCKQUOTE>
  
@@ -184,7 +182,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  other words consider deploying growisofs for <I>incremental</I>
  multisession backups, then you shall find <A
  HREF="mkisofs-2.01a16-root.diff">this '-old-root' extension</A> to
-@@ -586,7 +589,8 @@ through ide-scsi, the way it was under 2
+@@ -586,7 +589,8 @@
  unsupported it actually still works in 2.6 (I for one still use it).
  
  <LI>If you go for BD-R/DVD&plusmn;R multisessioning, you have to use
@@ -194,7 +192,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  or later</A> or apply <A HREF="multi.diff">this patch</A>.
  
  <LI>And when it comes to <B>DVD+R Double Layer and <NOBR>DVD-R</NOBR>
-@@ -630,7 +634,7 @@ working. To see it in action, insert for
+@@ -630,7 +634,7 @@
  access it, '<TT>dd if=/dev/scd<FONT COLOR="red">N</FONT> count=0</TT>'
  would do. Then verify that kernel logs &quot;<TT>sr<FONT
  COLOR="red">N</FONT>: mmc-3 profile: 1Ah</TT>&quot. You should now be
@@ -203,7 +201,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  obs=32k</TT>' or even '<TT>mke2fs -b 2048 /dev/scd<FONT
  COLOR="red">N</FONT></TT>' and observe kernel logging &quot;<TT>sr<FONT
  COLOR="red">N</FONT>: dirty DVD+RW media</TT>.&quot
-@@ -802,7 +806,7 @@ huge*.void</TT>'. Otherwise you might ha
+@@ -802,7 +806,7 @@
  <TR VALIGN="TOP" ALIGN="JUSTIFY">
  <TD><FONT SIZE="-1"><SUP>(***)</SUP></FONT>
  <TD><FONT SIZE="-1">E.g. when mastering DVD-Video disc:-) Note that
@@ -212,7 +210,7 @@ diff -Naurp dvd+rw-tools.orig/index.html dvd+rw-tools/index.html
  <TT>-dvd-compat</TT> automatically.</FONT></TR>
  </TABLE>
  
-@@ -908,7 +912,7 @@ Now, the problem is that isofs i-nodes<S
+@@ -908,7 +912,7 @@
  entries (light-greens), byte offsets from the beginning of media. This
  means that no directory (green areas) may cross 4GB boundary without
  being effectively corrupted<TT>:-(</TT> It should be noted that in

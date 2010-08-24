@@ -1,10 +1,9 @@
 Author: Petr Salinger <Petr.Salinger@seznam.cz>
 Description: FTBFS on GNU/kFreeBSD (Closes: #374841).
 
-diff -Naurp dvd+rw-tools.orig/Makefile.m4 dvd+rw-tools/Makefile.m4
---- dvd+rw-tools.orig/Makefile.m4	2008-03-02 17:17:09.000000000 +0000
-+++ dvd+rw-tools/Makefile.m4	2008-04-01 09:03:41.000000000 +0000
-@@ -14,6 +14,7 @@ ifelse(substr(OS,0,7),[MINGW32],[define(
+--- a/Makefile.m4
++++ b/Makefile.m4
+@@ -14,6 +14,7 @@
  ifelse(OS,NetBSD,[define([OS],[BSD])CXXFLAGS+=-D__unix])
  ifelse(OS,OpenBSD,[define([OS],[BSD])])
  ifelse(OS,FreeBSD,[define([OS],[BSD])LDLIBS=-lcam])
@@ -12,7 +11,7 @@ diff -Naurp dvd+rw-tools.orig/Makefile.m4 dvd+rw-tools/Makefile.m4
  ifelse(OS,IRIX64,[define([OS],[IRIX])])
  
  ifelse(OS,Darwin,[
-@@ -188,7 +189,7 @@ CC	=gcc
+@@ -188,7 +189,7 @@
  CFLAGS	+=$(WARN) -O2 -D_REENTRANT
  CXX	=g++
  CXXFLAGS+=$(WARN) -O2 -fno-exceptions -D_REENTRANT
@@ -21,9 +20,8 @@ diff -Naurp dvd+rw-tools.orig/Makefile.m4 dvd+rw-tools/Makefile.m4
  LINK.o	=$(LINK.cc)
  
  prefix?=/usr/local
-diff -Naurp dvd+rw-tools.orig/growisofs.c dvd+rw-tools/growisofs.c
---- dvd+rw-tools.orig/growisofs.c	2008-03-04 09:15:03.000000000 +0000
-+++ dvd+rw-tools/growisofs.c	2008-04-01 09:03:41.000000000 +0000
+--- a/growisofs.c
++++ b/growisofs.c
 @@ -403,7 +403,7 @@
  #define _LARGEFILE64_SOURCE
  #define _FILE_OFFSET_BITS 64
@@ -42,7 +40,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.c dvd+rw-tools/growisofs.c
  # include <sys/syscall.h>
  # ifndef SYS_mlockall
  #  define SYS_mlockall 324
-@@ -995,7 +995,7 @@ char *setup_fds (char *device)
+@@ -995,7 +995,7 @@
      goto open_rw;
  }
  
@@ -51,7 +49,7 @@ diff -Naurp dvd+rw-tools.orig/growisofs.c dvd+rw-tools/growisofs.c
  
  #include <sys/cdio.h>
  #include <camlib.h>
-@@ -2937,7 +2937,7 @@ int main (int argc, char *argv[])
+@@ -2937,7 +2937,7 @@
  	    if (setrlimit(RLIMIT_MEMLOCK,&rlim)) break;
  	}
  # endif
@@ -60,10 +58,9 @@ diff -Naurp dvd+rw-tools.orig/growisofs.c dvd+rw-tools/growisofs.c
  	syscall(SYS_mlockall,3);
  # else
  	mlockall(MCL_CURRENT|MCL_FUTURE);
-diff -Naurp dvd+rw-tools.orig/transport.hxx dvd+rw-tools/transport.hxx
---- dvd+rw-tools.orig/transport.hxx	2008-03-01 10:34:43.000000000 +0000
-+++ dvd+rw-tools/transport.hxx	2008-04-01 09:03:41.000000000 +0000
-@@ -483,7 +483,7 @@ public:
+--- a/transport.hxx
++++ b/transport.hxx
+@@ -483,7 +483,7 @@
      {	return 1;   }
  };
  
