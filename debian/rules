@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 
-include /usr/share/quilt/quilt.make
-
-clean: unpatch
+clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
@@ -13,7 +11,7 @@ clean: unpatch
 	dh_clean
 
 build: build-stamp
-build-stamp: patch
+build-stamp:
 	dh_testdir
 
 	CFLAGS="$(CFLAGS)" $(MAKE) WARN=-DI_KNOW_ALL_ABOUT_SUDO
