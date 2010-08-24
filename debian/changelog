@@ -1,3 +1,29 @@
+dvd+rw-tools (7.1-7) unstable; urgency=low
+
+  [ Rogério Brito ]
+  * [decae9d] Drop genisoimage to recommends. Closes: #565874
+  * [2f59000] This package complies to policy 3.8.4.
+  * [0cedd75] Fix override disparity between package and ftpmasters'
+    list.
+  * [6f78f78] Initial version of manpage for dvd-ram-control, fixing a
+    lintian warning.
+  * [76d161f] Add (very) preliminary documentation to -use-the-force-
+    luke options. Closes: #276701
+  * [2e4186a] Preliminary registering with doc-base. Closes: #451688
+
+  [ TANIGUCHI Takaki ]
+  * [9a8ffbc] change section from utils to video
+  * [08bebff] remove unneed Section:
+
+  [ Rogério Brito ]
+  * [a3bb0fb] Refresh the patches
+  * [524f4d2] Update to source format "3.0 (quilt)"
+  * [1fe998b] Confirm that the package conforms to Policy 3.9.1.
+  * [b5d63c1] Fix lintian's doc-base-file-separator-extra-whitespaces.
+  * [cca8441] Fix manpage errors for dvd-ram-control.
+
+ -- Rogério Brito <rbrito@ime.usp.br>  Tue, 24 Aug 2010 12:00:44 -0300
+
 dvd+rw-tools (7.1-6) unstable; urgency=low
 
   * New maintainer (Closes: #543837)
