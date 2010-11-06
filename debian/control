@@ -14,25 +14,42 @@ Vcs-Browser: http://git.debian.org/?p=pkg-opt-media/dvd%2Brw-tools.git
 Vcs-Git: git://git.debian.org/pkg-opt-media/dvd+rw-tools.git
 Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 
-Package: dvd+rw-tools
+Package: growisofs
 Architecture: any
 Depends: ${misc:Depends},
 	 ${shlibs:Depends}
-Recommends: genisoimage
+Description: DVD+-RW/R recorder
+ growisofs is a general purpose DVD recording program that supports:
+ .
+  * random-access media (DVD+RW, DVD-RAM, plain files, hard disk partitions)
+  * mastering multisession DVD media (DVD+R, DVD-R/-RW, and Blu-ray Disc)
+  * first-/single-session recording of arbitrary pre-mastered image
+    (formatted as UDF, ISO9660 or any other file system, if formatted at
+    all) to all supported DVD media types.
+ .
+ growisofs is able to either write pre-created ISO images or create them
+ on-the-fly (by calling genisoimage).
+ .
+ This package also contains dvd+rw-format, a utility to format a DVD+RW media.
+
+Package: dvd+rw-tools
+Architecture: any
+Depends: ${misc:Depends},
+	 ${shlibs:Depends},
+	 genisoimage,
+	 growisofs
 Suggests: cdrskin
 Description: DVD+-RW/R tools
- dvd+rw-tools makes it possible to burn DVD images created by dvdauthor or
- genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks, replacing
- cdrecord-proDVD in many cases.
+ The dvd+rw-tools suite makes it possible to burn DVD images created by
+ dvdauthor or genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks,
+ replacing cdrecord-proDVD in many cases.
  .
- The package contains:
+ This package contains dvd+rw-mediainfo (to give details about DVD
+ disks), and some programs to control the write speed and obtain
+ information from DVD-RAM.
  .
-   * growisofs to burn DVD images or create a data DVD on the fly
-   * dvd+rw-format to format a DVD+RW
-   * dvd+rw-mediainfo to give details about DVD disks
- .
- and some programs to control the write speed and obtain information from
- DVD-RAM.
+ Additionally, it depends on the growisofs package to provide the main
+ front-end for burning DVD-like media.
 
 Package: dvd+rw-tools-dbg
 Section: debug
@@ -45,4 +62,5 @@ Description: DVD+-RW/R tools (debug)
  genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks, replacing
  cdrecord-proDVD in many cases.
  .
- This package contains the debugging symbols.
+ This package contains the debugging symbols for the programs in the
+ growisofs and dvd+rw-tools packages.
