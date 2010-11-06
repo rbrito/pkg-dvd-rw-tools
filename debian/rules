@@ -19,7 +19,7 @@ build-stamp:
 	CFLAGS="$(CFLAGS)" $(MAKE) rpl8
 	sed -n "/^%changelog$$/,$$ p" dvd+rw-tools.spec > ChangeLog
 
-	touch build-stamp
+	touch $@
 
 install: build
 	dh_testdir
@@ -28,10 +28,6 @@ install: build
 	dh_installdirs
 
 	$(MAKE) install prefix=$(CURDIR)/debian/dvd+rw-tools/usr
-
-	mkdir -p debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools
-	cp index.html debian/docs/dvd-rw.html debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools
-	uudecode debian/docs/isofs4gb.gif.uee -o debian/dvd+rw-tools/usr/share/doc/dvd+rw-tools/isofs4gb.gif
 
 binary: binary-arch
 
