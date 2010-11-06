@@ -1,3 +1,19 @@
+dvd+rw-tools (7.1-8) unstable; urgency=low
+
+  * The "Let's be leaner release"
+  * janitorial tasks:
+    + Wrap some fiels for VCS-friendliness
+    + Drop sharutils from build-dependencies (with format 3.0, we can
+      have binaries in the packaging).
+    + Add list of files to additionally remove at the clean target
+    + Use bzip2 compression at level 9 to make everything smaller.
+  * Splitting the package, as per Josselin Mouette's request:
+    + New growisofs package, with only growisofs and dvd+rw-format
+    + Older dvd+rw-tools now depends on the growisofs package. This time
+      really Closes: #565874.
+
+ -- Rogério Brito <rbrito@ime.usp.br>  Sat, 06 Nov 2010 19:29:48 -0200
+
 dvd+rw-tools (7.1-7) unstable; urgency=low
 
   [ Rogério Brito ]
