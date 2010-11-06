@@ -1,1 +1,5 @@
-debian/manpages/*
+debian/manpages/btcflash.8
+debian/manpages/dvd+rw-booktype.1
+debian/manpages/dvd+rw-mediainfo.1
+debian/manpages/dvd-ram-control.1
+debian/manpages/rpl8.8
