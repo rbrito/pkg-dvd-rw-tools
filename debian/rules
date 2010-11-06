@@ -27,7 +27,7 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) install prefix=$(CURDIR)/debian/dvd+rw-tools/usr
+	$(MAKE) install prefix=$(CURDIR)/debian/tmp/usr
 
 binary: binary-arch
 
@@ -37,6 +37,7 @@ binary-arch: install
 	dh_installchangelogs ChangeLog
 	dh_installdocs
 	dh_installman
+	dh_install
 	dh_strip --dbg-package=dvd+rw-tools-dbg
 	dh_compress
 	dh_fixperms
