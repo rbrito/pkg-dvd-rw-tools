@@ -17,6 +17,8 @@ Package: growisofs
 Architecture: any
 Depends: ${misc:Depends},
 	 ${shlibs:Depends}
+Breaks: dvd+rw-tools (<< 7.1-9)
+Replaces: dvd+rw-tools (<< 7.1-9)
 Description: DVD+-RW/R recorder
  growisofs is a general purpose DVD recording program that supports:
  .
@@ -36,7 +38,7 @@ Architecture: any
 Depends: ${misc:Depends},
 	 ${shlibs:Depends},
 	 genisoimage,
-	 growisofs
+	 growisofs (>= 7.1-9)
 Suggests: cdrskin
 Description: DVD+-RW/R tools
  The dvd+rw-tools suite makes it possible to burn DVD images created by
