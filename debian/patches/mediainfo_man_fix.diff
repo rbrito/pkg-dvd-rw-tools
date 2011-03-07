@@ -1,0 +1,18 @@
+Description: Fix grammar in manpage for dvd+rw-mediainfo
+Author: Jon McManus <jon@acss.net.au>
+Reviewed-By: Rogério Theodoro de Brito <rbrito@ime.usp.br>
+Bug-Debian: http://bugs.debian.org/607605
+Forwarded: no
+Last-Update: 2011-03-07
+
+--- a/debian/manpages/dvd+rw-mediainfo.1
++++ b/debian/manpages/dvd+rw-mediainfo.1
+@@ -11,7 +11,7 @@
+ .B dvd+rw\-mediainfo
+ command displays information about the drive and disk in the specified dvd
+ drive (e.g. \fI/dev/dvd\fR). This is especially useful for debugging
+-purposed and it is requested to include it's output when reporting bugs
++purposes and it is requested that its output be included when reporting bugs
+ found in the \fBdvd+rw\-tools\fI package.
+
+ .SH OPTIONS

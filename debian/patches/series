@@ -7,3 +7,4 @@
 07-cdrkit-doc.patch
 08-includes.patch
 09-wctomb.patch
+mediainfo_man_fix.diff
