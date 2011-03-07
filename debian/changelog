@@ -1,3 +1,11 @@
+dvd+rw-tools (7.1-10) unstable; urgency=low
+
+  * Add patch to fix grammar in manpage. Closes: #607605.
+    Thanks Jon McManus <jon@acss.net.au>.
+  * Ignore pseudo-overwrite response from Bluray devices. Closes: #615978.
+
+ -- Rogério Brito <rbrito@ime.usp.br>  Mon, 07 Mar 2011 12:48:03 -0300
+
 dvd+rw-tools (7.1-9) unstable; urgency=low
 
   * debian/control: add information that growisofs Breaks/Replaces older
