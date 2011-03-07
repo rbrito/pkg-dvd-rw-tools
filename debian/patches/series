@@ -8,3 +8,4 @@
 08-includes.patch
 09-wctomb.patch
 mediainfo_man_fix.diff
+ignore_pseudo_overwrite.patch
