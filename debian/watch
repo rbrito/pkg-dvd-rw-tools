@@ -1,0 +1,3 @@
+version=3
+http://fy.chalmers.se/~appro/linux/DVD+RW/tools \
+(?:|.*/)dvd\+rw-tools(?:[_\-]v?|)(\d[^\s/]*)\.(?:tar\.xz|txz|tar\.bz2|tbz2|tar\.gz|tgz)
