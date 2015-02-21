@@ -7,7 +7,7 @@ Uploaders:
  Rogério Brito <rbrito@ime.usp.br>
 Build-Depends:
  debhelper (>= 9),
- libcam-dev [kfreebsd-i386 kfreebsd-amd64],
+ libcam-dev [kfreebsd-any],
  m4
 Standards-Version: 3.9.1
 Vcs-Browser: http://anonscm.debian.org/cgit/pkg-opt-media/dvd+rw-tools.git
