@@ -2,26 +2,30 @@ dvd+rw-tools (7.1-11~2.gbp445604) UNRELEASED; urgency=medium
 
   ** SNAPSHOT build @4456041da1c8f4c139ce39df8ef10fd62a5c53da **
 
+  * Add list of files to ignore during the build.
   * debian/watch: Add watch file. Thanks Bart Martens.
   * debian/{control,growisofs.install}: Normalize with wrap-and-sort.
   * debian/{compat,control}: Bump debhelper compat to 9.
-  * debian/rules: Don't force outdated compression format (bzip2).
-  * debian/control: Fix broken git URL.
-  * debian/patches: Add patch to fix burning BD-R discs.
-    Thanks to Thomas Schmitt <scdbackup@gmx.net> (Closes: #713016)
-  * Add some files to be ignored.
-  * debian/control: Remove outdated flag DMUA.
-  * debian/source/options: Remove outdated instructions to compress with bzip2.
-  * Add partial list of files to ignore.
-  * Update list of files to ignore.
-  * debian/control: Fix lintian's vcs-field-not-canonical complaint.
-  * debian/rules: Use a smaller dh-style rules file (still not good).
-    In particular, this now respects the hardening options passed via CFLAGS and
-    siblings.
-  * debian/control: Don't use hardcoded list of kFreeBSD architectures.
-    Thanks to Robert Millan <rmh@debian.org> (Closes: #634504)
-  * debian/control: Confirm compliancy with policy 3.9.6.
-  * debian/copyright: Claim my copyright years.
+  * debian/patches:
+    + Add patch to fix burning BD-R discs.
+      Thanks to Thomas Schmitt <scdbackup@gmx.net> (Closes: #713016)
+  * debian/source/options:
+    + Remove outdated instructions to compress with bzip2.
+  * debian/control:
+    + Fix broken git URL.
+    + Remove outdated flag DMUA.
+    + Fix lintian's vcs-field-not-canonical complaint.
+    + Don't use hardcoded list of kFreeBSD architectures.
+      Thanks to Robert Millan <rmh@debian.org> (Closes: #634504)
+    + Confirm compliancy with policy 3.9.6.
+  * debian/rules:
+    + Don't force outdated compression format (bzip2).
+    + Use a smaller dh-style rules file (still not good). In particular,
+      this now respects the hardening options passed via CFLAGS and
+      siblings.
+  * debian/copyright:
+    + Convert to copyright format 1.0.
+    + Claim my copyright years.
 
  -- Rogério Brito <rbrito@ime.usp.br>  Fri, 20 Feb 2015 23:19:02 -0200
 
