@@ -1,3 +1,28 @@
+dvd+rw-tools (7.1-11~1.gbp54abe7) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @54abe7776e485032692d90b67d4a07376832f965 **
+
+  * debian/watch: Add watch file. Thanks Bart Martens.
+  * debian/{control,growisofs.install}: Normalize with wrap-and-sort.
+  * debian/{compat,control}: Bump debhelper compat to 9.
+  * debian/rules: Don't force outdated compression format (bzip2).
+  * debian/control: Fix broken git URL.
+  * debian/patches: Add patch to fix burning BD-R discs.
+    Thanks to Thomas Schmitt <scdbackup@gmx.net> (Closes: #713016)
+  * Add some files to be ignored.
+  * debian/control: Remove outdated flag DMUA.
+  * debian/source/options: Remove outdated instructions to compress with bzip2.
+  * Add partial list of files to ignore.
+  * Update list of files to ignore.
+  * debian/control: Fix lintian's vcs-field-not-canonical complaint.
+  * debian/rules: Use a smaller dh-style rules file (still not good).
+    In particular, this now respects the hardening options passed via CFLAGS and
+    siblings.
+  * debian/control: Don't use hardcoded list of kFreeBSD architectures.
+    Thanks to Robert Millan <rmh@debian.org> (Closes: #634504)
+
+ -- Rogério Brito <rbrito@ime.usp.br>  Fri, 20 Feb 2015 23:19:02 -0200
+
 dvd+rw-tools (7.1-10) unstable; urgency=low
 
   * Add patch to fix grammar in manpage. Closes: #607605.
