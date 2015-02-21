@@ -2,6 +2,7 @@
 /.pc/
 ChangeLog
 btcflash
+build-stamp
 debian/*.log
 debian/*.substvars
 debian/dvd+rw-tools-dbg/
