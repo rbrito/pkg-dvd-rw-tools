@@ -2,12 +2,14 @@ Source: dvd+rw-tools
 Section: video
 Priority: optional
 Maintainer: Optical Media Tools Team <pkg-opt-media-team@lists.alioth.debian.org>
-Uploaders: TANIGUCHI Takaki <takaki@debian.org>,
-	   Rogério Brito <rbrito@ime.usp.br>
+Uploaders:
+ TANIGUCHI Takaki <takaki@debian.org>,
+ Rogério Brito <rbrito@ime.usp.br>
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7),
-	       libcam-dev [kfreebsd-i386 kfreebsd-amd64],
-	       m4
+Build-Depends:
+ debhelper (>= 7),
+ libcam-dev [kfreebsd-i386 kfreebsd-amd64],
+ m4
 Standards-Version: 3.9.1
 Vcs-Browser: http://git.debian.org/?p=pkg-opt-media/dvd%2Brw-tools.git
 Vcs-Git: git://git.debian.org/pkg-opt-media/dvd+rw-tools.git
@@ -15,10 +17,13 @@ Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 
 Package: growisofs
 Architecture: any
-Depends: ${misc:Depends},
-	 ${shlibs:Depends}
-Breaks: dvd+rw-tools (<< 7.1-9)
-Replaces: dvd+rw-tools (<< 7.1-9)
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Breaks:
+ dvd+rw-tools (<< 7.1-9)
+Replaces:
+ dvd+rw-tools (<< 7.1-9)
 Description: DVD+-RW/R recorder
  growisofs is a general purpose DVD recording program that supports:
  .
@@ -35,11 +40,13 @@ Description: DVD+-RW/R recorder
 
 Package: dvd+rw-tools
 Architecture: any
-Depends: ${misc:Depends},
-	 ${shlibs:Depends},
-	 genisoimage,
-	 growisofs (>= 7.1-9)
-Suggests: cdrskin
+Depends:
+ genisoimage,
+ growisofs (>= 7.1-9),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Suggests:
+ cdrskin
 Description: DVD+-RW/R tools
  The dvd+rw-tools suite makes it possible to burn DVD images created by
  dvdauthor or genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks,
@@ -56,8 +63,9 @@ Package: dvd+rw-tools-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
-	 dvd+rw-tools (= ${binary:Version})
+Depends:
+ dvd+rw-tools (= ${binary:Version}),
+ ${misc:Depends}
 Description: DVD+-RW/R tools (debug)
  dvd+rw-tools makes it possible to burn DVD images created by dvdauthor or
  genisoimage to DVD+R, DVD+RW, DVD-R, and DVD-RW disks, replacing
