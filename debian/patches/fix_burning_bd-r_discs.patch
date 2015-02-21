@@ -1,0 +1,22 @@
+Description: Fix burning of blank BD-R disks.
+ When burning blank BD-R disks, dvd+rw-tools generate, at the end of the
+ process, the error message:
+ .
+   :-[ CLOSE SESSION failed with SK=5h/INVALID FIELD IN CDB]: Input/output error
+ .
+ This patch fixes it. Tested by many people following Debian's bug report #713016.
+Author: Thomas Schmitt <scdbackup@gmx.net>
+Bug-Debian: https://bugs.debian.org/713016
+Forwarded: no
+Last-Update: 2015-02-20
+--- a/growisofs_mmc.cpp
++++ b/growisofs_mmc.cpp
+@@ -756,6 +756,8 @@
+ 
+     wait_for_unit (cmd);
+ 
++    bdr_plus_pow = 1;
++
+     cmd[0] = 0x35;	// FLUSH CACHE
+     cmd[9] = 0;
+     cmd.transport();

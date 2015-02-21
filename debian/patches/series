@@ -8,3 +8,4 @@
 08-includes.patch
 09-wctomb.patch
 ignore_pseudo_overwrite.patch
+fix_burning_bd-r_discs.patch
