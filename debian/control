@@ -9,7 +9,7 @@ Build-Depends:
  debhelper (>= 9),
  libcam-dev [kfreebsd-any],
  m4
-Standards-Version: 3.9.1
+Standards-Version: 3.9.6
 Vcs-Browser: http://anonscm.debian.org/cgit/pkg-opt-media/dvd+rw-tools.git
 Vcs-Git: git://anonscm.debian.org/pkg-opt-media/dvd+rw-tools.git
 Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
