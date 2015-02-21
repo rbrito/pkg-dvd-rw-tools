@@ -1,2 +1,17 @@
 *.o
 /.pc/
+ChangeLog
+btcflash
+debian/*.log
+debian/*.substvars
+debian/dvd+rw-tools-dbg/
+debian/dvd+rw-tools/
+debian/files
+debian/growisofs/
+debian/tmp/
+dvd+rw-booktype
+dvd+rw-format
+dvd+rw-mediainfo
+dvd-ram-control
+growisofs
+rpl8
