@@ -7,7 +7,7 @@ Uploaders:
  Rogério Brito <rbrito@ime.usp.br>
 DM-Upload-Allowed: yes
 Build-Depends:
- debhelper (>= 7),
+ debhelper (>= 9),
  libcam-dev [kfreebsd-i386 kfreebsd-amd64],
  m4
 Standards-Version: 3.9.1
