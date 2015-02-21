@@ -1,8 +1,9 @@
-Author: Andy Polyakov <appro@fy.chalmers.se>
-Download: http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Contact: Andy Polyakov <appro@fy.chalmers.se>
+Source: http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 
 Files: *
-Copyright: (C) 2002-2008 Andy Polyakov <appro@fy.chalmers.se>
+Copyright: 2002-2008 Andy Polyakov <appro@fy.chalmers.se>
 License: GPL-2+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU General Public License
@@ -22,17 +23,17 @@ License: GPL-2+
  can be found in /usr/share/common-licenses/GPL-2 file.
 
 Files: btcflash.cpp
-Copyright: (C) David Huang <khym@azeotrope.org>
+Copyright: David Huang <khym@azeotrope.org>
 License: PD
  This work is dedicated to the public domain.
 
-Files: dvd+rw-booktype.cpp, dvd+rw-mediainfo.cpp, rpl8.cpp
+Files: dvd+rw-booktype.cpp dvd+rw-mediainfo.cpp rpl8.cpp
 Copyright: n/a
 License: PD
  The code is in public domain.
 
 Files: debian/*
-Copyright: (C) 2005-2009 Daniel Baumann <daniel@debian.org>
+Copyright: 2005-2009 Daniel Baumann <daniel@debian.org>
 License: GPL-2+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU General Public License
