@@ -11,7 +11,7 @@ Build-Depends:
  libcam-dev [kfreebsd-i386 kfreebsd-amd64],
  m4
 Standards-Version: 3.9.1
-Vcs-Browser: http://git.debian.org/?p=pkg-opt-media/dvd%2Brw-tools.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-opt-media/dvd+rw-tools.git
 Vcs-Git: git://git.debian.org/pkg-opt-media/dvd+rw-tools.git
 Homepage: http://fy.chalmers.se/~appro/linux/DVD+RW/
 
