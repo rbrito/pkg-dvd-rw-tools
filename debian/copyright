@@ -34,6 +34,7 @@ License: PD
 
 Files: debian/*
 Copyright: 2005-2009 Daniel Baumann <daniel@debian.org>
+           2010-2015 Rogério Theodoro de Brito <rbrito@ime.usp.br>
 License: GPL-2+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU General Public License
